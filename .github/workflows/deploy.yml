@@ -13,6 +13,7 @@ jobs:
       - name: Install dependencies
         uses: php-actions/composer@v5
         with:
+          ssh_key: ${{ secrets.KEY }}
           command: composer install
   deploy:
     runs-on: ubuntu-latest
