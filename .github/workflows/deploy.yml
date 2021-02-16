@@ -23,7 +23,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: rsync deployments
         uses: burnett01/rsync-deployments@4.1
         with:
