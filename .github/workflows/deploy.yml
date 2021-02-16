@@ -14,6 +14,7 @@ jobs:
         uses: php-actions/composer@v5
         with:
           ssh_key: ${{ secrets.KEY }}
+          ssh_key_pub: ${{ secrets.PUB }}
           command: install
   deploy:
     runs-on: ubuntu-latest
