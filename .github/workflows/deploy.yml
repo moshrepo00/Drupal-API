@@ -7,28 +7,15 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v1
-      - uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{ secrets.KEY }}
-
-
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{ secrets.KEY }}
+      - uses: actions/checkout@v2
       - name: rsync deployments
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avzr --delete
           remote_path: /var/www/html/
+          remote_user: ${{ secrets.USER }}
           remote_host: ${{ secrets.HOST }}
           remote_key: ${{ secrets.KEY }}
