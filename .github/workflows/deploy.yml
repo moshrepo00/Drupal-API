@@ -10,12 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
-        uses: php-actions/composer@v5
+      - uses: shivammathur/setup-php@v2
         with:
-          php_version: 7.1
-          version: 1
-          command: install
+          php-version: "7.4"
+      - uses: "ramsey/composer-install@v1"
   deploy:
     runs-on: ubuntu-latest
     steps:
