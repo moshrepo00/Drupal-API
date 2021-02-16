@@ -10,10 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: shivammathur/setup-php@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          php-version: "7.4"
-      - uses: "ramsey/composer-install@v1"
+          php-version: 7.3
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
+          coverage: none
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-interaction --no-suggest
   deploy:
     runs-on: ubuntu-latest
     steps:
