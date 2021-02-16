@@ -10,11 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      # For YAML Actions, use v2 or later
-      - uses: pxgamer/composer-action@master
+      - name: Install dependencies
+        uses: php-actions/composer@v5
         with:
-          command: install --optimize-autoloader --prefer-dist
+          php_version: 7.1
+          version: 1
+          command: install
   deploy:
     runs-on: ubuntu-latest
     steps:
