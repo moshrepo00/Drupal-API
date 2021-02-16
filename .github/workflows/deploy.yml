@@ -16,6 +16,8 @@ jobs:
           php-version: 7.3
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
           coverage: none
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-suggest
   deploy:
