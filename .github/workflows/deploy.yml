@@ -7,6 +7,13 @@ on:
     branches: [ main ]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        uses: php-actions/composer@v5
+        with:
+          command: composer install
   deploy:
     runs-on: ubuntu-latest
     steps:
