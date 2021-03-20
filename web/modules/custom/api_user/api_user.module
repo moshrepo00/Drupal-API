@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains api_user.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function api_user_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the api_user module.
+    case 'help.page.api_user':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Endpoints for User auth') . '</p>';
+      return $output;
+
+    default:
+  }
+}
