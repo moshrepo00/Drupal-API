@@ -24,7 +24,7 @@ jobs:
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avzr --delete
-          remote_path: /var/www/html/
+          remote_path: ${{ secrets.PATH }}
           remote_user: ${{ secrets.USER }}
           remote_host: ${{ secrets.HOST }}
           remote_key: ${{ secrets.KEY }}
