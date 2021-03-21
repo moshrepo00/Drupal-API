@@ -1,2 +1,3 @@
 /web/sites/*/settings.local.php
 /web/sites/*/files/
+/web/sites/*/files/*
