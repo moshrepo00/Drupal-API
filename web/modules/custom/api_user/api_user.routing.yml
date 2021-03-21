@@ -1,0 +1,8 @@
+api_user.queue_test_form:
+  path: '/admin/api_user/form/queue_test'
+  defaults:
+    _form: '\Drupal\api_user\Form\QueueTestForm'
+    _title: 'QueueTestForm'
+  requirements:
+    _access: 'TRUE'
+    _role: 'administrator'

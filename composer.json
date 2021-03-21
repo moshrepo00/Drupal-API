@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.0",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^8.8",
@@ -41,6 +42,12 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "enable-patching": true,
+            "patches": {
+                "drupal/eck": {
+                    "Use Admin Theme to Create/Edit ECK": "https://www.drupal.org/files/issues/2020-06-21/eck-2927308-11.patch"
+                }
             }
         },
         "installer-paths": {
