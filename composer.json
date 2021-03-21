@@ -48,7 +48,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/direct_queue": {
-                "Fix error in direct queue error": "https://www.drupal.org/files/issues/2018-07-18/direct_queue-fix-imports-2986556-1.patch"
+                "Fix error in direct queue": "https://www.drupal.org/files/issues/2018-07-18/direct_queue-fix-imports-2986556-1.patch"
             }
         },
         "installer-paths": {
