@@ -18,7 +18,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.0",
-        "drupal/console": "1.5.0",
+        "drupal/console": "^1.9",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
@@ -43,6 +43,12 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            }
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/direct_queue": {
+                "Fix error in direct queue error": "https://www.drupal.org/files/issues/2018-07-18/direct_queue-fix-imports-2986556-1.patch"
             }
         },
         "installer-paths": {
