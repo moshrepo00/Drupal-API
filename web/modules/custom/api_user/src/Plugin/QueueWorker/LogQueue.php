@@ -10,7 +10,6 @@ use Drupal\Core\Queue\QueueWorkerBase;
  * @QueueWorker (
  *   id = "log_queue",
  *   title = @Translation("Queue description."),
- *   cron = {"time" = 30}
  * )
  */
 class LogQueue extends QueueWorkerBase {
