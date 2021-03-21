@@ -23,7 +23,7 @@ jobs:
       - name: rsync deployments
         uses: burnett01/rsync-deployments@4.1
         with:
-          switches: -avzr --delete --exclude-from={'excluded.txt'}
+          switches: -avzr --delete --exclude /web/sites/*/settings.local.php --exclude /web/sites/*/files/
           remote_path: /var/www/api.moweb.info
           remote_user: ${{ secrets.USER }}
           remote_host: ${{ secrets.HOST }}
