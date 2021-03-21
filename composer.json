@@ -42,12 +42,6 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
-            },
-            "enable-patching": true,
-            "patches": {
-                "drupal/eck": {
-                    "Use Admin Theme to Create/Edit ECK": "https://www.drupal.org/files/issues/2020-06-21/eck-2927308-11.patch"
-                }
             }
         },
         "installer-paths": {
