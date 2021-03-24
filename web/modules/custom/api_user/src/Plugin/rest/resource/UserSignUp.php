@@ -69,9 +69,6 @@ class UserSignUp extends ResourceBase
 
     return (new ModifiedResourceResponse($data));
 
-
-
-    
   }
 
 }
