@@ -19,6 +19,7 @@ jobs:
         with:
           php_version: 7.3
           version: 1
+          command: composer install --prefer-dist --no-interaction --no-suggest
       - name: rsync deployments
         uses: burnett01/rsync-deployments@4.1
         with:
