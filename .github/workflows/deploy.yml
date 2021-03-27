@@ -14,16 +14,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: main
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 7.3
-          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
-          coverage: none
       - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v1"
+        uses: php-actions/composer@v5
         with:
-          composer-options: "--ignore-platform-reqs --working-dir=backend"
+          php_version: 7.3
+          version: 1
+          command: composer install --prefer-dist --no-interaction --no-suggest
       - name: rsync deployments
         uses: burnett01/rsync-deployments@4.1
         with:
