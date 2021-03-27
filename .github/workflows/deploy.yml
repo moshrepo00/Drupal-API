@@ -10,14 +10,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          path: main
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: 7.3
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
           coverage: none
-      - name: Checkout code
-        uses: actions/checkout@v2
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-suggest
       - name: rsync deployments
