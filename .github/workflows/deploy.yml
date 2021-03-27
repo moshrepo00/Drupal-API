@@ -10,6 +10,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.3
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
+          coverage: none
       - name: Checkout code
         uses: actions/checkout@v2
         with:
@@ -17,7 +23,6 @@ jobs:
       - name: Install Composer dependencies
         uses: php-actions/composer@v5
         with:
-          php_version: 7.3
           version: 1
           command: composer install --prefer-dist --no-interaction --no-suggest
       - name: rsync deployments
