@@ -18,18 +18,13 @@ jobs:
           coverage: none
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          path: main
       - name: Install Composer dependencies
-        uses: php-actions/composer@v5
-        with:
-          version: 1
-          command: composer install --prefer-dist --no-interaction --no-suggest
+        run: composer install --prefer-dist --no-interaction --no-suggest
       - name: rsync deployments
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avzr --delete --exclude /web/sites/*/settings.local.php --exclude /web/sites/*/files/ --exclude linux_amd64_DirectQueueGo
-          remote_path: ${{ secrets.PATH }}
+          remote_path: /var/www/api.moweb.info
           remote_user: ${{ secrets.USER }}
           remote_host: ${{ secrets.HOST }}
           remote_key: ${{ secrets.KEY }}
