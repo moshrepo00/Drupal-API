@@ -68,7 +68,6 @@ class UserSignUp extends ResourceBase
     $currentUser = \Drupal::currentUser();
 
     return (new ModifiedResourceResponse($data));
-
   }
 
 }
