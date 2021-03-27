@@ -21,7 +21,9 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
           coverage: none
       - name: Install Composer dependencies
-        run: composer install --prefer-dist --no-interaction --no-suggest
+        uses: "ramsey/composer-install@v1"
+        with:
+          composer-options: "--ignore-platform-reqs --working-dir=backend"
       - name: rsync deployments
         uses: burnett01/rsync-deployments@4.1
         with:
