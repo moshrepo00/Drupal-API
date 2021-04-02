@@ -25,7 +25,7 @@ jobs:
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avzr --delete --exclude /web/sites/*/settings.local.php --exclude /web/sites/*/files/ --exclude linux_amd64_DirectQueueGo
-          remote_path: /var/www/back.moweb.info
+          remote_path: /var/www/drupal.moweb.info
           remote_user: ${{ secrets.USER }}
           remote_host: ${{ secrets.HOST }}
           remote_key: ${{ secrets.KEY }}
