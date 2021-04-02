@@ -29,6 +29,15 @@ jobs:
           remote_user: ${{ secrets.USER }}
           remote_host: ${{ secrets.HOST }}
           remote_key: ${{ secrets.KEY }}
-          rsh: drush cim -y && drush cr
+      - name: Post Deployment Script
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd /var/www/drupal.moweb.info
+            drush cim -y
+            drush cr
+          host: ${{ secrets.HOST }}
+          user:  ${{ secrets.USER }}
+          key: ${{ secrets.KEY}}
 
 
