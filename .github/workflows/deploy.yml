@@ -29,5 +29,6 @@ jobs:
           remote_user: ${{ secrets.USER }}
           remote_host: ${{ secrets.HOST }}
           remote_key: ${{ secrets.KEY }}
+          rsh: drush cim -y && drush cr
 
 
