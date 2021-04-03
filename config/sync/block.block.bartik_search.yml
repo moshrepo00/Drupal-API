@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - search
+    - user
   theme:
     - bartik
 _core:
@@ -20,4 +21,11 @@ settings:
   provider: search
   label_display: visible
   page_id: node_search
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
