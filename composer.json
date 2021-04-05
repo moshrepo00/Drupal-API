@@ -29,7 +29,9 @@
         "drupal/eck": "^1.0@beta",
         "drupal/queue_ui": "^2.2",
         "drupal/restui": "^1.19",
-        "drush/drush": "^10.4"
+        "drush/drush": "^10.4",
+        "stripe/stripe-php": "^7.76",
+        "vlucas/phpdotenv": "^5.3"
     },
     "conflict": {
         "drupal/drupal": "*"

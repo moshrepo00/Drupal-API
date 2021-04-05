@@ -1,0 +1,5 @@
+name: 'api_stripe'
+type: module
+description: 'Stripe Integration Module'
+core: 8.x
+package: 'Custom'

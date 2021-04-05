@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains api_stripe.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function api_stripe_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the api_stripe module.
+    case 'help.page.api_stripe':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Stripe Integration Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
