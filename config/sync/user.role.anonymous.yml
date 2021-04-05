@@ -12,6 +12,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'restful post create_customer_subscription'
   - 'restful post user_sign_up'
   - 'search content'
   - 'use text format restricted_html'
