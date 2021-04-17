@@ -1,0 +1,26 @@
+# Chat entity routing definition
+chat_entity.settings_tab:
+  route_name: chat_entity.settings
+  title: 'Settings'
+  base_route: chat_entity.settings
+
+entity.chat_entity.canonical:
+  route_name: entity.chat_entity.canonical
+  base_route: entity.chat_entity.canonical
+  title: 'View'
+
+entity.chat_entity.edit_form:
+  route_name: entity.chat_entity.edit_form
+  base_route: entity.chat_entity.canonical
+  title: 'Edit'
+
+entity.chat_entity.version_history:
+  route_name: entity.chat_entity.version_history
+  base_route: entity.chat_entity.canonical
+  title: 'Revisions'
+
+entity.chat_entity.delete_form:
+  route_name:  entity.chat_entity.delete_form
+  base_route:  entity.chat_entity.canonical
+  title: Delete
+  weight: 10

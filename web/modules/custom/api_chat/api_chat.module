@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains api_chat.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function api_chat_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the api_chat module.
+    case 'help.page.api_chat':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module For Custom Chat Entities') . '</p>';
+      return $output;
+
+    default:
+  }
+}

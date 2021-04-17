@@ -1,0 +1,5 @@
+name: 'api_chat'
+type: module
+description: 'Module For Custom Chat Entities'
+core: 8.x
+package: 'Custom'

@@ -1,0 +1,31 @@
+add chat entity entities:
+  title: 'Create new Chat entity entities'
+
+administer chat entity entities:
+  title: 'Administer Chat entity entities'
+  description: 'Allow to access the administration form to configure Chat entity entities.'
+  restrict access: true
+
+delete chat entity entities:
+  title: 'Delete Chat entity entities'
+
+edit chat entity entities:
+  title: 'Edit Chat entity entities'
+
+view published chat entity entities:
+  title: 'View published Chat entity entities'
+
+view unpublished chat entity entities:
+  title: 'View unpublished Chat entity entities'
+
+view all chat entity revisions:
+  title: 'View all Chat entity revisions'
+
+revert all chat entity revisions:
+  title: 'Revert all Chat entity revisions'
+  description: 'Role requires permission <em>view Chat entity revisions</em> and <em>edit rights</em> for chat entity entities in question or <em>administer chat entity entities</em>.'
+
+delete all chat entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Chat entity revisions</em> and <em>delete rights</em> for chat entity entities in question or <em>administer chat entity entities</em>.'
+

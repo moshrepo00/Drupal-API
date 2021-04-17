@@ -1,0 +1,5 @@
+entity.chat_entity.add_form:
+  route_name: entity.chat_entity.add_form
+  title: 'Add Chat entity'
+  appears_on:
+    - entity.chat_entity.collection
