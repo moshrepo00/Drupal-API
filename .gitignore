@@ -120,6 +120,9 @@ typings/
 
 /.DS_Store
 
+/private
+/private/*
+
 
 /web/.DS_Store
 **/.DS_Store
