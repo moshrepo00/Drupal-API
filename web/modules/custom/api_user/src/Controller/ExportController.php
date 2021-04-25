@@ -51,11 +51,15 @@ class ExportController extends ControllerBase
 
     /** @var DrupalDateTime $currentDateObj */
     $currentDateObj = new DrupalDateTime('now');
-    $currentTimestamp = $currentDateObj->format('Y-m-d\TH:i:s');
+    $currentTimestamp = $currentDateObj->getTimestamp();
 
-    $csvFilename = 'export_' . $currentTimestamp . '.csv';
+    $fileDir = $exportDir . '/article_' . $currentTimestamp;
+    if (!is_dir($fileDir)) {
+      mkdir($fileDir, 0755);
+    }
+    $csvFilename = 'export.csv';
 
-    $csvHandler = fopen($exportDir . '/' . $csvFilename, 'w');
+    $csvHandler = fopen($fileDir . '/' . $csvFilename, 'w');
 
 
     foreach ($list as $line) {
@@ -63,11 +67,32 @@ class ExportController extends ControllerBase
     }
     fclose($csvHandler);
 
+//    $this->generateHtaccess($fileDir, $csvFilename);
 
     return [
       '#type' => 'markup',
       '#markup' => $this->t('Implement method: generateFile')
     ];
+  }
+
+  protected function generateHtaccess($dirPath, $fileName)
+  {
+    $message = 'Authorization Required';
+    $htpasswdPath = getcwd() . '/' . $dirPath . '/.htpasswd';
+    if(!file_exists($dirPath . '/.htaccess')) {
+      $content = "<Files $fileName>"  . "\n";
+      $content .= "AuthName $message"  . "\n";
+      $content .= "AuthUserFile $htpasswdPath"  . "\n";
+      $content .= "AuthType Basic"  . "\n";
+      $content .= "require valid-user"  . "\n";
+      $content .= "</Files>";
+      file_put_contents($dirPath . '/.htaccess', $content);
+    }
+  }
+
+  protected function generateHtpasswd()
+  {
+
   }
 
 }
