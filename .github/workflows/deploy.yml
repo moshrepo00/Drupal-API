@@ -34,8 +34,8 @@ jobs:
         with:
           command: |
             cd /var/www/drupal.moweb.info
-#            drush cim -y
-#            drush cr
+            drush cim -y
+            drush cr
           host: ${{ secrets.HOST }}
           user:  ${{ secrets.USER }}
           key: ${{ secrets.KEY}}
