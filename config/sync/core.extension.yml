@@ -3,7 +3,6 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
-  api_chat: 0
   api_stripe: 0
   api_user: 0
   automated_cron: 0
@@ -37,6 +36,9 @@ module:
   image: 0
   kint: 0
   link: 0
+  mailsystem: 0
+  media: 0
+  media_library: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0
@@ -53,6 +55,7 @@ module:
   serialization: 0
   shortcut: 0
   simple_oauth: 0
+  swiftmailer: 0
   system: 0
   taxonomy: 0
   text: 0

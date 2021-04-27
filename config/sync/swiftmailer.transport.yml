@@ -1,0 +1,14 @@
+transport: smtp
+smtp_host: in-v3.mailjet.com
+smtp_port: 587
+smtp_encryption: tls
+smtp_credential_provider: swiftmailer
+smtp_credentials:
+  swiftmailer:
+    username: c4f5b85cf317c117423782fe3e8a3c7a
+    password: f98c3e63b411b85880b86e93ae1de2e0
+sendmail_path: /usr/sbin/sendmail
+sendmail_mode: bs
+spool_directory: ''
+_core:
+  default_config_hash: RSNbRD3ekSaZoE19f3eHhm93gKOcD2PtmaAVmV3XMes

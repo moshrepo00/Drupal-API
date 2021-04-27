@@ -87,6 +87,8 @@ class ExportController extends ControllerBase
       $content .= "require valid-user"  . "\n";
       $content .= "</Files>";
       file_put_contents($dirPath . '/.htaccess', $content);
+
+
     }
   }
 

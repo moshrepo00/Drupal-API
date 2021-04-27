@@ -27,7 +27,6 @@ function api_user_help($route_name, RouteMatchInterface $route_match) {
 
 function api_user_preprocess_page(&$vars)
 {
-  \Drupal::logger('api_user')->warning('DEBUGGING CURRENT USER ID: ' . \Drupal::currentUser()->id());
 
 }
 
@@ -37,7 +36,7 @@ function api_user_file_download($uri) {
   /** @var User $user */
   $user = User::load(\Drupal::currentUser()->id());
   $roles = $user->getRoles();
-  if (!sin_array('administrator', $roles)) {
+  if (!in_array('administrator', $roles)) {
     return -1;
   }
 
