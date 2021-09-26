@@ -28,11 +28,12 @@ function api_user_help($route_name, RouteMatchInterface $route_match) {
 function api_user_preprocess_page(&$vars)
 {
 
+
 }
 
 
 function api_user_file_download($uri) {
-
+  \Drupal::logger('api_user')->warning('<pre><code>' . print_r($uri, TRUE) . '</code></pre>');
   /** @var User $user */
   $user = User::load(\Drupal::currentUser()->id());
   $roles = $user->getRoles();
