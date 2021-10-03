@@ -8,3 +8,11 @@ api_user.queue_test_form:
     _role: 'administrator'
 
 
+
+api_user.social_login_controller_hello:
+  path: '/api_user/google'
+  defaults:
+    _controller: '\Drupal\api_user\Controller\SocialLoginController::googleLogin'
+    _title: 'googleLogin'
+  requirements:
+    _permission: 'access content'
