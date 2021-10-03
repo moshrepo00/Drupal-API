@@ -53,7 +53,9 @@ class SocialLoginController extends ControllerBase {
 
 
       // now you can use this profile info to create account in your website and make user logged in.
-    }
+    } 
+
+    \Drupal::messenger()->addMessage($client->createAuthUrl());
 
     return [
       '#type' => 'markup',
