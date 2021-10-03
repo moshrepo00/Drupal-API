@@ -51,7 +51,7 @@ class SocialLoginController extends ControllerBase {
 
     return [
       '#type' => 'markup',
-      '#markup' => $this->t('Implement method: hello with parameter(s): $name'),
+      '#markup' => "<a href='".$client->createAuthUrl()."'>Google Login</a>",
     ];
   }
 
