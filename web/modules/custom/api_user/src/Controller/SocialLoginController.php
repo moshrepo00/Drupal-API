@@ -42,9 +42,8 @@ class SocialLoginController extends ControllerBase {
       $email =  $google_account_info->email;
       $name =  $google_account_info->name;
 
-      \Drupal::logger('api_user')->warning('<pre><code>' . $email . '</code></pre>');
-      \Drupal::logger('api_user')->warning('<pre><code>' . $name . '</code></pre>');
-
+      \Drupal::messenger()->addMessage('Your email is: ' . $email);
+      \Drupal::messenger()->addMessage('Your name is: ' . $name);
 
       // now you can use this profile info to create account in your website and make user logged in.
     }
