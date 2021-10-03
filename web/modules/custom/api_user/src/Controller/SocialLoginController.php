@@ -49,7 +49,7 @@ class SocialLoginController extends ControllerBase {
       \Drupal::messenger()->addMessage('Your email is: ' . $email);
       \Drupal::messenger()->addMessage('Your name is: ' . $name);
       \Drupal::messenger()->addMessage('Your id is: ' . $id);
-      \Drupal::logger('api_user')->notice('<pre><code>' . print_r($google_oauth->tokeninfo(), TRUE) . '</code></pre>' );
+//      \Drupal::logger('api_user')->notice('<pre><code>' . print_r($google_oauth->a, TRUE) . '</code></pre>' );
 
 
       // now you can use this profile info to create account in your website and make user logged in.
