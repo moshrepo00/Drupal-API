@@ -36,15 +36,20 @@ class SocialLoginController extends ControllerBase {
       $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
       $client->setAccessToken($token['access_token']);
 
-      // get profile info
+      // get profile
+      /** @var \Google\Service\Oauth2 $google_oauth */
       $google_oauth = new \Google_Service_Oauth2($client);
       $google_account_info = $google_oauth->userinfo->get();
+
+
       $email =  $google_account_info->email;
       $name =  $google_account_info->name;
+      $id = $google_account_info->id;
 
       \Drupal::messenger()->addMessage('Your email is: ' . $email);
       \Drupal::messenger()->addMessage('Your name is: ' . $name);
-      \Drupal::logger('api_user')->notice('<pre><code>' . print_r($google_account_info, TRUE) . '</code></pre>' );
+      \Drupal::messenger()->addMessage('Your id is: ' . $id);
+      \Drupal::logger('api_user')->notice('<pre><code>' . print_r($google_oauth->tokeninfo(), TRUE) . '</code></pre>' );
 
 
       // now you can use this profile info to create account in your website and make user logged in.
