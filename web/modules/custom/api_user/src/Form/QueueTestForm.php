@@ -36,7 +36,7 @@ class QueueTestForm extends FormBase {
 //    );
     $form['submit'] = [
       '#type' => 'submit',
-      '#prefix' => '<div class="g-recaptcha" data-sitekey="6LccwHMeAAAAALka668fPwunJsV8LtcfxskNmEWu"></div>',
+      '#prefix' => '<div class="g-recaptcha" data-sitekey="6LccwHMeAAAAALka668fPwunJsV8LtcfxskNmEWu" data-callback="onSubmit"></div>',
       '#value' => $this->t('Submit'),
     ];
 
