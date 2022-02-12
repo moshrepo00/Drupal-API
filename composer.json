@@ -28,6 +28,7 @@
         "drupal/direct_queue": "^1.1",
         "drupal/draggableviews": "^2.0",
         "drupal/eck": "^1.0@beta",
+        "drupal/google_analytics": "^3.1",
         "drupal/queue_ui": "^2.2",
         "drupal/restui": "^1.19",
         "drupal/simple_oauth": "^5.0",
