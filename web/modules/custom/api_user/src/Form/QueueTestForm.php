@@ -24,16 +24,16 @@ class QueueTestForm extends FormBase {
       \Drupal::messenger()->addMessage('FORM BUILT!!!!');
     $form['#attached']['library'][] = 'api_user/google-functionality';
 
-    $form['captcha_button'] = array(
-      '#type' => 'button',
-      '#value' => t('Alternative Action'),
-      '#attributes' => [
-        'class' => ['g-recaptcha'],
-        'data-sitekey' => ['reCAPTCH_6LcLR3MeAAAAAIMThlgpmc_m5vVnmWWEQmyl_jbu'],
-        'data-callback' => ['onSubmit'],
-        'data-action' => ['submit'],
-      ],
-    );
+//    $form['captcha_button'] = array(
+//      '#type' => 'button',
+//      '#value' => t('Alternative Action'),
+//      '#attributes' => [
+//        'class' => ['g-recaptcha'],
+//        'data-sitekey' => ['6LccwHMeAAAAALka668fPwunJsV8LtcfxskNmEWu'],
+//        'data-callback' => ['onSubmit'],
+//        'data-action' => ['submit'],
+//      ],
+//    );
     $form['submit'] = [
       '#type' => 'submit',
       '#prefix' => '<div class="g-recaptcha" data-sitekey="6LccwHMeAAAAALka668fPwunJsV8LtcfxskNmEWu"></div>',
