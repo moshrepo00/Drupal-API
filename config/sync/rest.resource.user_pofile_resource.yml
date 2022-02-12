@@ -1,0 +1,18 @@
+uuid: 752d8bdc-715c-4878-9347-2d9fe3ec4d1b
+langcode: en
+status: true
+dependencies:
+  module:
+    - api_user
+    - serialization
+    - user
+id: user_pofile_resource
+plugin_id: user_pofile_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie
