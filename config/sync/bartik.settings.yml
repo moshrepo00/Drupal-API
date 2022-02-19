@@ -1,6 +1,6 @@
 favicon:
   mimetype: image/svg+xml
-  path: 'public://drupal-9-logo_1.svg'
+  path: 'public://drupal-9-logo_2.svg'
   use_default: false
 features:
   comment_user_picture: true
@@ -9,6 +9,3 @@ features:
   node_user_picture: true
 logo:
   use_default: true
-third_party_settings:
-  shortcut:
-    module_link: true
