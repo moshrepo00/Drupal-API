@@ -18,14 +18,14 @@ plugin: search_form_block
 settings:
   id: search_form_block
   label: Search
-  provider: search
   label_display: visible
+  provider: search
   page_id: node_search
 visibility:
   user_role:
     id: user_role
-    roles:
-      administrator: administrator
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
