@@ -12,4 +12,5 @@ use Drupal\Core\Entity\ContentEntityDeleteForm;
 class ChatEntityDeleteForm extends ContentEntityDeleteForm {
 
 
+
 }
