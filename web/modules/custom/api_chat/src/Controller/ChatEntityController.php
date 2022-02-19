@@ -111,13 +111,13 @@ class ChatEntityController extends ControllerBase implements ContainerInjectionI
         // Use revision link to link to revisions that are not active.
         $date = $this->dateFormatter->format($revision->getRevisionCreationTime(), 'short');
         if ($vid != $chat_entity->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.chat_entity.revision', [
+          $link = \Drupal\Core\Link::fromTextAndUrl($date, new Url('entity.chat_entity.revision', [
             'chat_entity' => $chat_entity->id(),
             'chat_entity_revision' => $vid,
           ]));
         }
         else {
-          $link = $chat_entity->link($date);
+          $link = \Drupal\Core\EntityInterface::toLink($chat_entity)->toString();
         }
 
         $row = [];
