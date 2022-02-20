@@ -27,7 +27,7 @@ function api_user_help($route_name, RouteMatchInterface $route_match) {
 
 function api_user_preprocess_page(&$vars)
 {
-
+  $test = '';
 }
 
 
