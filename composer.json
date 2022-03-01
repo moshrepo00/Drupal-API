@@ -29,6 +29,7 @@
         "drupal/google_analytics": "^3.1",
         "drupal/pathauto": "^1.8",
         "drupal/queue_ui": "^2.2",
+        "drupal/redis": "1.x-dev@dev",
         "drupal/restui": "^1.19",
         "drupal/seo_checklist": "^5.1",
         "drupal/simple_oauth": "^5.0",
