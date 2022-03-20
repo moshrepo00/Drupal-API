@@ -16,3 +16,19 @@ api_user.social_login_controller_hello:
     _title: 'googleLogin'
   requirements:
     _permission: 'access content'
+
+api_user.xero_test_form:
+  path: '/api_user/form/xero_test'
+  defaults:
+    _form: '\Drupal\api_user\Form\XeroTestForm'
+    _title: 'XeroTestForm'
+  requirements:
+    _access: 'TRUE'
+
+api_user.xero:
+  path: '/api-user/xero'
+  defaults:
+    _controller: '\Drupal\api_user\Controller\SocialLoginController::xeroLogin'
+    _title: 'Xero Login Test'
+  requirements:
+    _permission: 'access content'

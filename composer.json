@@ -39,7 +39,8 @@
         "google/apiclient": "^2.0",
         "predis/predis": "^1.1",
         "stripe/stripe-php": "^7.76",
-        "vlucas/phpdotenv": "^5.3"
+        "vlucas/phpdotenv": "^5.3",
+        "xeroapi/xero-php-oauth2": "^2.12"
     },
     "conflict": {
         "drupal/drupal": "*"
